@@ -1,0 +1,10 @@
+.home-phone {
+    align-self: center;
+    background: url(/images/home_phone.png);
+    background-position: 0 0;
+    background-size: 454px 618px;
+    flex-basis: 454px;
+    height: 618px;
+    margin-right: 50px;
+    margin-left: 80px;
+}

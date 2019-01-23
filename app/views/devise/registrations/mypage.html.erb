@@ -1,0 +1,16 @@
+<br><br>
+<div class="form-wrapper form-horizontal">
+    <div class="circle-avatar inline-block" >
+        <% if current_user.persisted? && current_user.avatar? %>
+          <%= image_tag current_user.avatar.to_s %>
+        <% else %>
+          <%= image_tag 'no_avatar.png' %>
+        <% end %>
+    </div>
+    <div class="inline-block" style="margin-left: 50px">
+        <p class="username-style"><%= current_user.username %> <%= link_to 'プロフィール編集', edit_user_registration_path, class: "btn btn-outline-secondary btn-sm" %></p>
+        <p>投稿 <%= @post_count %>件</p>
+        <p><b><%= current_user.fullname %></b></p>
+        <p>よろしくお願いします！</p>
+    </div>
+</div>

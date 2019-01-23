@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%= csrf_meta_tags %>
+        <%= csp_meta_tag %>
+    
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>    
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Jigram</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minumum-scale=1, maximun-scale=1, viewport-fit=cover">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <%= favicon_link_tag('favicon.ico') %>
+        <!-- Bootstrap core CSS -->
+        <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+    
+        <!-- Custom styles for this template -->
+        <link href="main.css" rel="stylesheet">
+        <link href="signin.css" rel="stylesheet">
+    </head>
+  
+    <body style="background-color: #fafafa">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="home-phone"></div>
+            </div>
+            <div class="col-md-6">
+                <main role="main" class="container">
+                  <%= yield %>
+                </main>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>

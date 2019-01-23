@@ -1,0 +1,9 @@
+.inline-block {
+    display: inline-block;     /* インラインブロック要素にする */
+    padding: 10px;             /* 余白指定 */
+    vertical-align: middle;    /* 要素を上下中央揃えにする */
+}
+
+.username-style {
+    font-size: 30px;
+}

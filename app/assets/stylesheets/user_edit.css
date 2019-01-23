@@ -1,0 +1,23 @@
+.circle-avatar img{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.button {
+  border: 0;
+  color: #3897f0;
+  display: inline;
+  padding: 0;
+  cursor:pointer;
+}
+
+.form-control {
+  position: relative;
+  height: auto;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 11px;
+  background-color: #fafafa;
+}

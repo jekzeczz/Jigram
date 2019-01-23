@@ -1,0 +1,41 @@
+<br><br>
+<div class="form-wrapper form-horizontal">
+<%= form_for :post, url: {action: "update", params: {id: @post.id}} do |f| %>
+  <%= f.hidden_field :username, value: current_user.username %>
+  <div>
+    <%= link_to posts_path, :method => :get do %>
+      <i class="fas fa-chevron-left fa-2x button"></i>
+    <% end %>
+    <div class="float_test">
+      <label class="far fa-image fa-2x button" style="width: 45px; "><%= f.file_field :image, id: 'post_img', class: 'btn-file' %></label>
+      <label class="far fa-check-circle fa-2x button"><%= f.submit class: 'btn-file' %></label>
+    </div>
+  </div>
+  <%= f.text_field :caption, class: "form-control", placeholder: 'Caption' %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
+  <hr>
+  <%= image_tag @post.image.thumb.url, :id=>"img_prev", :class=>"hidden", :style=>"width: 584px" %>
+<% end %>
+</div>
+
+<script>
+    function readURL(input) {
+      if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+        $('#img_prev')
+          .attr('src', e.target.result)
+          .width(584);
+        };
+
+        reader.readAsDataURL(input.files[0]);
+      }
+    }
+    
+    $("#post_img").change(function(){
+      $('#img_prev').removeClass('hidden');
+      $('#img_prev').show();
+      readURL(this);
+    });
+</script>
